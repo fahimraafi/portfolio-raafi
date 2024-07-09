@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Gymove - Fitness Bootstrap Admin Dashboard</title>
+    <title>Fahim Uddin Raafi</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href=" {{ asset('dashboard-assets')  }}/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href=" {{ asset('dashboard-assets')  }}/images/Phynixin_logo.png">
     <link href="{{ asset('dashboard-assets')  }}/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
@@ -23,7 +23,7 @@
                         <div class="col-xl-12">
                             <div class="auth-form">
                                 <div class="text-center mb-3">
-                                    <a href="#"><img src="{{ asset('dashboard-assets')  }}/images/logo-full.png" alt=""></a>
+                                    <a href="#"><img src="{{ asset('dashboard-assets')  }}/images/Phynixin_logo.png" alt="Phynixin_logo.png" style="height: 100px; width: 100px;" class="rounded-circle"></a>
                                 </div>
                                 <h4 class="text-center mb-4 text-white">Sign in your account</h4>
 
