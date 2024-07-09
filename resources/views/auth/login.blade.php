@@ -23,7 +23,7 @@
                         <div class="col-xl-12">
                             <div class="auth-form">
                                 <div class="text-center mb-3">
-                                    <a href="index.html"><img src="{{ asset('dashboard-assets')  }}/images/logo-full.png" alt=""></a>
+                                    <a href="#"><img src="{{ asset('dashboard-assets')  }}/images/logo-full.png" alt=""></a>
                                 </div>
                                 <h4 class="text-center mb-4 text-white">Sign in your account</h4>
 
@@ -35,7 +35,7 @@
                                         @error('email')
                                         <span class="text-danger">
                                                     {{ $message }}
-                                                </span>
+                                        </span>
                                         @enderror
                                     </div>
                                     <div class="form-group">
@@ -44,7 +44,7 @@
                                         @error('password')
                                         <span class="text-danger">
                                                     {{ $message }}
-                                                </span>
+                                        </span>
                                         @enderror
                                     </div>
                                     <div class="form-row d-flex justify-content-between mt-4 mb-2">
