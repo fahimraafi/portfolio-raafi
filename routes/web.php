@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\{CounterupController, FrontendController, HomeController, ProfileController, HeroSectionController};
 
 /*
 |--------------------------------------------------------------------------
@@ -13,18 +15,43 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome');
+// Route::view('/', 'welcome');
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+// Route::view('home', 'home')
+//     ->middleware(['auth', 'verified'])
+//     ->name('home');
 
-Route::view('profile', 'profile')
-    ->middleware(['auth'])
-    ->name('profile');
+// Route::view('profile', 'profile')
+//     ->middleware(['auth'])
+//     ->name('profile');
 
 require __DIR__.'/auth.php';
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Frontend Controllers
+Route::get('/', [FrontendController::class, 'index'])->name('index');
+
+// Frontend Controllers
+
+
+
+// Backend Controllers
+
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
+
+
+// Route::get('/hero-section', [App\Http\Controllers\HeroSectionController::class, 'index'])->name('index');
+Route::resource('/hero-section', HeroSectionController::class);
+Route::resource('/counterup', CounterupController::class);
+
+
+Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'profile'])->name('profile');
+
+
+// Logout route
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+// Backend Controllers
+
+
