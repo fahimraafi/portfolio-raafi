@@ -11,8 +11,10 @@
     <title>Fahim Uddin Raafi</title>
 
     <!-- Place favicon.ico in the root directory -->
-    <link rel="apple-touch-icon" href="{{ asset('frontend_assets') }}/img/favicon.png" />
-    <link rel="shortcut icon" type="image/png" href=" {{ asset('frontend_assets') }}/img/favicon.png" />
+    <link rel="apple-touch-icon"
+        href="{{ asset('frontend_assets') }}/img/favicon_raafi_portfolio_logo_Sample02-nobg.png" />
+    <link rel="shortcut icon" type="image/png"
+        href=" {{ asset('frontend_assets') }}/img/favicon_raafi_portfolio_logo_Sample02-nobg.png" />
 
     <!-- CSS here -->
     <link rel="stylesheet" href="{{ asset('frontend_assets') }}/css/animate.min.css">
@@ -70,13 +72,14 @@
 
                     <div class="logo-box">
                         <a href="{{ route('index') }}">
-                            <img src="{{ asset('frontend_assets') }}/img/logo/logo.png" alt="">
+                            <img src="{{ asset('frontend_assets') }}/img/logo/Raafi_portfolio_logo_Sample02-nobg.png"
+                                alt="" class="img-fluid">
                         </a>
                     </div>
 
                     <div class="header-info-list d-none d-md-inline-block">
                         <ul class="ul-reset">
-                            <li><a href="{{ route('index') }}">fahim.raafi.dev@gmail.com</a></li>
+                            <li><a href="{{ route('index') }}">Fahim Uddin Raafi</a></li>
                         </ul>
                     </div>
 
@@ -116,13 +119,14 @@
 
                     <div class="logo-box">
                         <a href="{{ route('index') }}">
-                            <img src="{{ asset('frontend_assets') }}/img/logo/logo.png" alt="">
+                            <img src="{{ asset('frontend_assets') }}/img/logo/Raafi_portfolio_logo_Sample02-nobg.png"
+                                alt="" class="img-fluid">
                         </a>
                     </div>
 
                     <div class="header-info-list d-none d-md-inline-block">
                         <ul class="ul-reset">
-                            <li><a href="{{ route('index') }}">fahim.raafi.dev@gmail.com</a></li>
+                            <li><a href="{{ route('index') }}">Fahim Uddin Raafi</a></li>
                         </ul>
                     </div>
 
@@ -174,16 +178,22 @@
                         <div class="row align-items-center">
                             <div class="col-md-6">
                                 <div class="hero-content-box">
-                                    <span class="hero-sub-title wow fadeInLeft" data-wow-delay="1.1s">Hi, I am
+                                    <span class="hero-sub-title wow fadeInLeft" data-wow-delay="1.1s">Hey, this is
                                         {{ $content->name }}
                                     </span>
-                                    <h1 class="hero-title wow fadeInLeft" data-wow-delay="1.2s"> I'm a
+                                    <h1 class="hero-title wow fadeInLeft" data-wow-delay="1.2s"> A
                                         {{ $content->designation }} & {{ $content->job_title }}
                                     </h1>
 
                                     <div class="hero-image-box d-md-none text-center wow fadeInRight"
                                         data-wow-delay="1.3s">
-                                        <img src="{{ asset('frontend_assets') }}/img/hero/me.png" alt="">
+                                        @if ($content->portfolio_photo != 'NULL')
+                                            <img src="{{ asset('uploads/hero_section_portfolio_photo') }}/{{ $content->portfolio_photo }}"
+                                                alt="">
+                                        @else
+                                            <img src="{{ asset('frontend_assets') }}/img/hero/me.png" alt="">
+                                        @endif
+
                                     </div>
 
                                     <p class="lead wow fadeInLeft" data-wow-delay="1.4s">
@@ -194,12 +204,14 @@
                                         <ul class="ul-reset social-icons wow fadeInLeft" data-wow-delay="1.6s">
                                             <li><a href="{{ $content->facebook_link }}"><i
                                                         class="fa-brands fa-facebook"></i></a></li>
+
+                                            <li><a href="{{ $content->instagram_link }}"><i
+                                                        class="fa-brands fa-instagram"></i></a></li>
                                             <li><a href="{{ $content->linkedin_link }}"><i
                                                         class="fa-brands fa-linkedin-in"></i></a></li>
                                             <li><a href="{{ $content->github_link }}"><i
                                                         class="fa-brands fa-github"></i></a></li>
-                                            <li><a href="{{ $content->instagram_link }}"><i
-                                                        class="fa-brands fa-instagram"></i></a></li>
+
                                         </ul>
                                     </div>
                                 </div>
@@ -240,7 +252,7 @@
                             <div class="col-6 col-lg-3">
                                 <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
                                     <div class="number"><span class="odometer"
-                                            data-count="{{ $counter->retention_rate}}"> 0 </span></div>
+                                            data-count="{{ $counter->retention_rate }}"> 0 </span></div>
                                     <div class="text">Percentage of <br>Retention & Referral</div>
                                 </div>
                             </div>

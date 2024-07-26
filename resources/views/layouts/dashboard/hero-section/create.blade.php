@@ -1,6 +1,8 @@
 @extends('layouts.dashboard')
 
 @section('content')
+
+
     <div class="row align-items-center">
         <div class="col-md-12">
             <div class="page-header-title">

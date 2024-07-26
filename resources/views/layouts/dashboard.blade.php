@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Dasho - Most Complete Bootstrap Admin Template</title>
+    <title>Admin App - Portfolio Website</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -66,7 +66,7 @@
                                 Section</a>
                         </li>
                         <li class=""><a href="{{ route('counterup.create') }}" class="nav-link" data-cont="forms">Counter Up</a></li>
-                        <li class=""><a class="nav-link" data-cont="datatable">Table</a></li>
+                        <li class=""><a href="{{ route('index') }}" class="nav-link" data-cont="datatable">Resume Section</a></li>
                         <li class=""><a class="nav-link" data-cont="Chart">Chart</a></li>
                         <li class=""><a class="nav-link" data-cont="Pages">Pages</a></li>
                         <li class=""><a class="nav-link" data-cont="App">App</a></li>
@@ -179,6 +179,16 @@
 
                             </ul>
                         </div>
+
+                        <div class="sidelink forms">
+                            <ul class="nav pcoded-inner-navbar sidenav-inner">
+                                <li class="nav-item pcoded-menu-caption sidenav-inner">
+                                    <label> Resume Section </label>
+                                </li>
+
+                            </ul>
+                        </div>
+
                         <div class="sidelink datatable">
                             <ul class="nav pcoded-inner-navbar sidenav-inner">
                                 <li class="nav-item pcoded-menu-caption">
@@ -493,7 +503,7 @@
         <div class="container">
             <div class="m-header">
                 <a class="mobile-menu" id="mobile-collapse1" href="#!"><span></span></a>
-                <a href="index.html" class="b-brand">
+                <a href="{{ route('home') }}" class="b-brand">
 
                     <img src="{{ asset('dashboard-assets') }}/images/logo-dark.svg" alt=""
                         class="logo images">

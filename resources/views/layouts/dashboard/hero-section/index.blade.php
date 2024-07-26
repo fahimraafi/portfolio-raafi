@@ -32,18 +32,26 @@
                                 <tbody>
                                     @forelse ($hero_section as $hero_content)
                                         <tr>
-                                            <td> {{ $loop->iteration }} </td>
-                                            <td> {{ $hero_content->name }} </td>
-                                            <td> {{ $hero_content->designation }} </td>
-                                            <td> {{ $hero_content->job_title }} </td>
-                                            <td> {{ $hero_content->short_job_description }} </td>
-                                            <td> {{ $hero_content->portfolio_photo }} </td>
-                                            <td> {{ $hero_content->facebook_link }} </td>
-                                            <td> {{ $hero_content->instagram_link }} </td>
-                                            <td> {{ $hero_content->linkedin_link }} </td>
-                                            <td> {{ $hero_content->github_link }} </td>
-                                            <td> {{ $hero_content->status }} </td>
-                                            <td> {{ $hero_content->created_by }} </td>
+                                            <td class="text-wrap w-10"> {{ $loop->iteration }} </td>
+                                            <td class="text-wrap w-10"> {{ $hero_content->name }} </td>
+                                            <td class="text-wrap w-10"> {{ $hero_content->designation }} </td>
+                                            <td class="text-wrap w-10"> {{ $hero_content->job_title }} </td>
+                                            <td class="text-wrap w-10"> {{ $hero_content->short_job_description }} </td>
+
+                                            {{-- @if ($hero_content->portfolio_photo != 'NULL')
+                                            <td class="text-wrap"> <img src="{{ asset('uploads/hero_section_portfolio_photo') }}/{{ $hero_content->portfolio_photo }}" alt="" class="img-fluid w-10 h-10" > </td>
+                                            @else
+                                            <td class="text-wrap w-10"> {{ $hero_content->portfolio_photo }} </td>
+                                            @endif --}}
+
+                                            <td class="text-wrap w-10"> {{ $hero_content->portfolio_photo }} </td>
+
+                                            <td class="text-wrap w-10"> {{ $hero_content->facebook_link }} </td>
+                                            <td class="text-wrap w-10"> {{ $hero_content->instagram_link }} </td>
+                                            <td class="text-wrap w-10"> {{ $hero_content->linkedin_link }} </td>
+                                            <td class="text-wrap w-10"> {{ $hero_content->github_link }} </td>
+                                            <td class="text-wrap w-10"> {{ $hero_content->status }} </td>
+                                            <td class="text-wrap w-10"> {{ $hero_content->created_by }} </td>
                                             <td>
                                                 <div class="d-flex">
 

@@ -30,6 +30,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('counterups');
+        Schema::table('counterups', function (Blueprint $table) {
+            Schema::dropIfExists('counterups');
+        });
+
     }
 };

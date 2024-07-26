@@ -96,7 +96,7 @@
                         <div class="col-lg-3">
                             <div class="input-group search-form">
                                 <input type="url" class="form-control" placeholder="FB Link"
-                                    data-has-listeners="true" name="facebook_link">
+                                    data-has-listeners="true" name="facebook_link" value="{{ $hero_section->facebook_link }}">
 
                             </div>
                         </div>
@@ -109,7 +109,7 @@
                         <div class="col-lg-3">
                             <div class="input-group search-form">
                                 <input type="url" class="form-control" placeholder="Enter your Profile URL"
-                                    data-has-listeners="true" name="instagram_link">
+                                    data-has-listeners="true" name="instagram_link" value="{{ $hero_section->instagram_link }}">
                             </div>
                         </div>
 
@@ -117,7 +117,7 @@
                         <div class="col-lg-3">
                             <div class="input-group search-form">
                                 <input type="url" class="form-control" placeholder="FB Link"
-                                    data-has-listeners="true" name="linkedin_link">
+                                    data-has-listeners="true" name="linkedin_link" value="{{ $hero_section->linkedin_link }}">
 
                             </div>
                         </div>
@@ -132,7 +132,7 @@
                         <div class="col-lg-3">
                             <div class="input-group search-form">
                                 <input type="url" class="form-control" placeholder="Enter your Profile URL"
-                                    data-has-listeners="true" name="github_link">
+                                    data-has-listeners="true" name="github_link" value="{{ $hero_section->github_link }}">
                             </div>
                         </div>
 

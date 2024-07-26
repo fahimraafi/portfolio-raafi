@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('designation');
-            $table->string('short_job_description')->nullable();
+            $table->longText('short_job_description')->nullable();
             $table->string('portfolio_photo')->nullable();
             $table->string('facebook_link')->nullable();
             $table->string('instagram_link')->nullable();

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Facades\Image;
 
 return [
 
@@ -169,6 +171,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\VoltServiceProvider::class,
+        // Intervention\Image\ImageServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -184,6 +187,8 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        // 'driver' => Intervention\Image\Drivers\Gd\Driver::class,
+        // 'Image' => Intervention\Image\Facades\Image::class
     ])->toArray(),
 
 ];
