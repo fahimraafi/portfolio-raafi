@@ -1,8 +1,6 @@
 @extends('layouts.dashboard')
 
 @section('content')
-
-
     <div class="row align-items-center">
         <div class="col-md-12">
             <div class="page-header-title">
@@ -68,6 +66,20 @@
                                     data-has-listeners="true" name="job_title">
                             </div>
 
+                            <label class="col-lg-2 col-form-label">Job Title 02:</label>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" placeholder="Enter your Job Title"
+                                    data-has-listeners="true" name="job_title_02">
+                            </div>
+
+
+
+
+                        </div>
+
+
+
+                        <div class="form-group row">
                             <label class="col-lg-2 col-form-label">Short Job Description:</label>
                             <div class="col-lg-3">
                                 <div class="input-group search-form">
@@ -77,12 +89,6 @@
                                 </div>
                             </div>
 
-
-                        </div>
-
-
-
-                        <div class="form-group row">
                             <label class="col-lg-2 col-form-label">Portfolio Photo:</label>
                             <div class="col-lg-3">
                                 <div class="input-group search-form">
@@ -91,6 +97,9 @@
                                 </div>
                             </div>
 
+                        </div>
+
+                        <div class="form-group row">
                             <label class="col-lg-2 col-form-label">Facebook Profile Link:</label>
                             <div class="col-lg-3">
                                 <div class="input-group search-form">
@@ -100,10 +109,6 @@
                                 </div>
                             </div>
 
-
-                        </div>
-
-                        <div class="form-group row">
                             <label class="col-lg-2 col-form-label">Instagram Profile Link:</label>
                             <div class="col-lg-3">
                                 <div class="input-group search-form">
@@ -112,8 +117,13 @@
                                 </div>
                             </div>
 
+                        </div>
+
+
+
+                        <div class="form-group row">
                             <label class="col-lg-2 col-form-label">Linkedin Profile Link:</label>
-                            <div class="col-lg-3">
+                            <div class="col-lg-2">
                                 <div class="input-group search-form">
                                     <input type="url" class="form-control" placeholder="FB Link"
                                         data-has-listeners="true" name="linkedin_link">
@@ -121,14 +131,8 @@
                                 </div>
                             </div>
 
-
-                        </div>
-
-
-
-                        <div class="form-group row">
                             <label class="col-lg-2 col-form-label">Github Profile Link:</label>
-                            <div class="col-lg-3">
+                            <div class="col-lg-2">
                                 <div class="input-group search-form">
                                     <input type="url" class="form-control" placeholder="Enter your Profile URL"
                                         data-has-listeners="true" name="github_link">
@@ -136,7 +140,7 @@
                             </div>
 
                             <label class="col-lg-2 col-form-label">Portfolio Status:</label>
-                            <div class="col-lg-3">
+                            <div class="col-lg-2">
                                 <select class="form-control input-group search-form" name='status'>
                                     <option>Active</option>
                                     <option>Inactive</option>
@@ -145,8 +149,14 @@
                             </div>
                         </div>
 
-                        <button type="submit" class="btn btn-glow-success btn-success" data-bs-toggle="tooltip"
-                            data-bs-original-title="btn btn-glow-success btn-success">Save</button>
+
+
+                            <button type="submit" class="btn btn-glow-success btn-success mt-5" data-bs-toggle="tooltip"
+                                data-bs-original-title="btn btn-glow-success btn-success">Save</button>
+
+
+
+
                     </form>
                 </div>
             </div>

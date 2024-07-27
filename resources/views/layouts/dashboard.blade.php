@@ -66,7 +66,7 @@
                                 Section</a>
                         </li>
                         <li class=""><a href="{{ route('counterup.create') }}" class="nav-link" data-cont="forms">Counter Up</a></li>
-                        <li class=""><a href="{{ route('index') }}" class="nav-link" data-cont="datatable">Resume Section</a></li>
+                        <li class=""><a href="{{ route('experience.index') }}" class="nav-link" data-cont="datatable">Experience</a></li>
                         <li class=""><a class="nav-link" data-cont="Chart">Chart</a></li>
                         <li class=""><a class="nav-link" data-cont="Pages">Pages</a></li>
                         <li class=""><a class="nav-link" data-cont="App">App</a></li>
@@ -183,7 +183,7 @@
                         <div class="sidelink forms">
                             <ul class="nav pcoded-inner-navbar sidenav-inner">
                                 <li class="nav-item pcoded-menu-caption sidenav-inner">
-                                    <label> Resume Section </label>
+                                    <label> Experience </label>
                                 </li>
 
                             </ul>
@@ -532,6 +532,9 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
+                    <li>
+                        <a href="{{ route('index') }}" class="btn btn-outline-success" data-bs-toggle="tooltip" data-bs-original-title="btn btn-outline-success" target="blank">Visit Website</a>
+                    </li>
                     <li>
                         <div class="dropdown">
                             <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown"><i

@@ -12,7 +12,7 @@ class ExperienceController extends Controller
      */
     public function index()
     {
-        //
+        return view('layouts.dashboard.experience.index');
     }
 
     /**

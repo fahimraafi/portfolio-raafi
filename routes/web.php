@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\{CounterupController, FrontendController, HomeController, ProfileController, HeroSectionController, ResumesectionController};
+use App\Http\Controllers\{CounterupController, ExperienceController, FrontendController, HomeController, ProfileController, HeroSectionController, ResumesectionController};
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +44,7 @@ Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'home'])->
 // Route::get('/hero-section', [App\Http\Controllers\HeroSectionController::class, 'index'])->name('index');
 Route::resource('/hero-section', HeroSectionController::class);
 Route::resource('/counterup', CounterupController::class);
+Route::resource('/experience', ExperienceController::class);
 
 
 Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'profile'])->name('profile');
