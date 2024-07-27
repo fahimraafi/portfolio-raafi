@@ -178,7 +178,7 @@
                         <div class="row align-items-center">
                             <div class="col-md-6">
                                 <div class="hero-content-box">
-                                    <span class="hero-sub-title wow fadeInLeft" data-wow-delay="1.1s">Hey, this is
+                                    <span class="hero-sub-title wow fadeInLeft" data-wow-delay="1.1s">Hey, I'm
                                         {{ $content->name }}
                                     </span>
                                     <h1 class="hero-title wow fadeInLeft" data-wow-delay="1.2s"> A
