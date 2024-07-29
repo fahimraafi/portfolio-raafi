@@ -92,8 +92,7 @@
                             <label class="col-lg-2 col-form-label">Portfolio Photo:</label>
                             <div class="col-lg-3">
                                 <div class="input-group search-form">
-                                    <input type="file" class="form-control" placeholder="Enter your Profile URL"
-                                        data-has-listeners="true" name="portfolio_photo">
+                                    <input type="file" class="form-control" data-has-listeners="true" name="portfolio_photo">
                                 </div>
                             </div>
 

@@ -38,13 +38,16 @@
                                             <td class="text-wrap w-10"> {{ $hero_content->job_title }} </td>
                                             <td class="text-wrap w-10"> {{ $hero_content->short_job_description }} </td>
 
-                                            {{-- @if ($hero_content->portfolio_photo != 'NULL')
-                                            <td class="text-wrap"> <img src="{{ asset('uploads/hero_section_portfolio_photo') }}/{{ $hero_content->portfolio_photo }}" alt="" class="img-fluid w-10 h-10" > </td>
-                                            @else
-                                            <td class="text-wrap w-10"> {{ $hero_content->portfolio_photo }} </td>
-                                            @endif --}}
+                                            <td class="text-wrap w-10">
+                                                @if ($hero_content->portfolio_photo =! "null")
+                                                    <img src="{{ asset('uploads/hero_section_portfolio_photo/' . $hero_content->portfolio_photo) }}" class="img-fluid w-10 h-10" alt="">
+                                                @else
 
-                                            <td class="text-wrap w-10"> {{ $hero_content->portfolio_photo }} </td>
+                                                @endif
+
+                                            </td>
+
+
 
                                             <td class="text-wrap w-10"> {{ $hero_content->facebook_link }} </td>
                                             <td class="text-wrap w-10"> {{ $hero_content->instagram_link }} </td>
@@ -55,8 +58,8 @@
                                             <td>
                                                 <div class="d-flex">
 
-                                                    <a href="{{ route('hero-section.edit', $hero_content->id) }}" class="btn btn-glow-primary btn-primary"
-                                                        data-bs-toggle="tooltip"
+                                                    <a href="{{ route('hero-section.edit', $hero_content->id) }}"
+                                                        class="btn btn-glow-primary btn-primary" data-bs-toggle="tooltip"
                                                         data-bs-original-title="btn btn-glow-primary btn-primary">
                                                         <i class="feather icon-edit"></i>
 

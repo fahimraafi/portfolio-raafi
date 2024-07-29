@@ -187,8 +187,8 @@
 
                                     <div class="hero-image-box d-md-none text-center wow fadeInRight"
                                         data-wow-delay="1.3s">
-                                        @if ($content->portfolio_photo != 'NULL')
-                                            <img src="{{ asset('uploads/hero_section_portfolio_photo') }}/{{ $content->portfolio_photo }}"
+                                        @if (!empty($content->portfolio_photo))
+                                            <img src="{{ asset('uploads/hero_section_portfolio_photo/' .$content->portfolio_photo) }}" class="img-fluid"
                                                 alt="">
                                         @else
                                             <img src="{{ asset('frontend_assets') }}/img/hero/me.png" alt="">

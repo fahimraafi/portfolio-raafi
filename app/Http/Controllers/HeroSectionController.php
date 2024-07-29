@@ -9,12 +9,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 use Intervention\Image\ImageManager;
+// use Intervention\Image\Drivers\Imagick\Driver;
 use Intervention\Image\Drivers\Gd\Driver;
-use Intervention\Image\MediaType;
-use Intervention\Image\Decoders\DataUriImageDecoder;
-use Intervention\Image\Decoders\Base64ImageDecoder;
-use Intervention\Image\Decoders\FilePathImageDecoder;
-use Intervention\Image\Encoders\AutoEncoder;
+
 
 class HeroSectionController extends Controller
 {
@@ -51,47 +48,26 @@ class HeroSectionController extends Controller
             'job_title' => 'required',
         ]);
 
+        $hero_section = Hero_section::create($request->except('_token')+[
+            'portfolio_photo' => 'null',
+            'created_by' => Auth::user()->name,
+        ]);
+
         // ============  Hero Section ImageIntervention  ============
 
-        if ($request->file('portfolio_photo')) {
+        if ($request->hasFile('portfolio_photo')) {
             $manager = new ImageManager(Driver::class);
             $photo_name = $request->name . "_" . date('Y-m-d') . "." . $request->file('portfolio_photo')->getClientOriginalExtension();
             $image = $manager->read($request->file('portfolio_photo'));
-            $img = $image->resize(437, 475);
 
-            $img->toJpeg(80)->save(base_path('public/uploads/hero_section_portfolio_photo/' . $photo_name));
-            $save_url = 'uploads/hero_section_portfolio_photo/' . $photo_name;
+            $destination = base_path('public/uploads/hero_section_portfolio_photo/');
+            $image->toJpeg()->save($destination . '/' . $photo_name);
 
-            $hero_section = Hero_section::create($request->except('_token')+[
+            Hero_section::find($hero_section->id)->update([
                 'portfolio_photo' => $photo_name,
-                'created_by' => Auth::user()->name,
             ]);
 
-
         }
-        else {
-            $hero_section = Hero_section::create($request->except('_token')+[
-                'portfolio_photo' => 'NULL',
-                'created_by' => Auth::user()->name,
-            ]);
-        }
-
-
-
-
-
-        // Hero_section::insert([
-        //     'name' => $request-> name,
-        //     'designation' => $request-> designation,
-        //     'short_job_description' => $request-> short_job_description,
-        //     'portfolio_photo' => 'NULL',
-        //     'facebook_link' => $request-> facebook_link,
-        //     'instagram_link' => $request-> instagram_link,
-        //     'linkedin_link' => $request-> linkedin_link,
-        //     'github_link' => $request-> github_link,
-        //     'status' => $request-> status,
-        //     'created_by' => Auth::user()->name ,
-        // ]);
 
 
         session()->flash('success', 'Contents Inserted Suucessfully');
